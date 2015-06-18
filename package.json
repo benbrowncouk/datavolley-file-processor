@@ -1,6 +1,6 @@
 {
   "name": "datavolley-file-processor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A module for processing of DataProject DataVolley files",
   "main": "index.js",
   "scripts": {

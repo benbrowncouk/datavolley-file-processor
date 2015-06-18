@@ -152,16 +152,16 @@ module.exports = {
         var parseStatsData = function (statsData, data) {
             if (statsData.substring(1, 2) == 'P') {
                 //Setter number
-                console.debug("Setter Number: " + statsData);
+                console.log("Setter Number: " + statsData);
             } else if (statsData.substring(1, 2) == 'p') {
                 //Point
-                console.debug("Point: " + statsData);
+                console.log("Point: " + statsData);
             } else if (statsData.substring(1, 2) == 'z') {
                 //Setter position
-                console.debug("Setter Position: " + statsData);
+                console.log("Setter Position: " + statsData);
             } else if (statsData.substring(1, 2) == '$') {
                 //Random codes
-                console.debug("Random Codes: " + statsData);
+                console.log("Random Codes: " + statsData);
             } else {
                 //Actual stats!!
                 var homeTeam = statsData.substring(0, 1) == '*';
@@ -173,7 +173,7 @@ module.exports = {
                     //Attack
                     if (outcome == '#') {
                         //Attack Success
-                        console.debug("Attack Success: " + statsData);
+                        console.log("Attack Success: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateAttackSuccess(playerNumber);
                         } else {
@@ -181,7 +181,7 @@ module.exports = {
                         }
                     } else if (outcome == '=') {
                         //Attack Success
-                        console.debug("Attack Fault: " + statsData);
+                        console.log("Attack Fault: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateAttackFault(playerNumber);
                         } else {
@@ -189,7 +189,7 @@ module.exports = {
                         }
                     } else {
                         //Attack Continuation
-                        console.debug("Attack Continuation: " + statsData);
+                        console.log("Attack Continuation: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateAttackAttempt(playerNumber);
                         } else {
@@ -200,7 +200,7 @@ module.exports = {
                     //Reception
                     if (outcome == '#') {
                         //Excellent Reception
-                        console.debug("Excellent Reception: " + statsData);
+                        console.log("Excellent Reception: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateExcellentReception(playerNumber);
                         } else {
@@ -208,7 +208,7 @@ module.exports = {
                         }
                     } else if (outcome == '=') {
                         //Reception Error
-                        console.debug("Reception Fault: " + statsData);
+                        console.log("Reception Fault: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateReceptionFault(playerNumber);
                         } else {
@@ -216,7 +216,7 @@ module.exports = {
                         }
                     } else {
                         //Reception Attempt
-                        console.debug("Reception Attempt: " + statsData);
+                        console.log("Reception Attempt: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateReceptionAttempt(playerNumber);
                         } else {
@@ -227,7 +227,7 @@ module.exports = {
                     //Serve
                     if (outcome == '#') {
                         //Serve Ace
-                        console.debug("Serve Ace: " + statsData);
+                        console.log("Serve Ace: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateServeAce(playerNumber);
                         } else {
@@ -235,7 +235,7 @@ module.exports = {
                         }
                     } else if (outcome == '=') {
                         //Serve Error
-                        console.debug("Serve Fault: " + statsData);
+                        console.log("Serve Fault: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateServeFault(playerNumber);
                         } else {
@@ -243,7 +243,7 @@ module.exports = {
                         }
                     } else {
                         //Serve Attempt
-                        console.debug("Serve Attempt: " + statsData);
+                        console.log("Serve Attempt: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateServeAttempt(playerNumber);
                         } else {
@@ -254,7 +254,7 @@ module.exports = {
                     //Block
                     if (outcome == '#') {
                         //Block Kill
-                        console.debug("Block Kill: " + statsData);
+                        console.log("Block Kill: " + statsData);
                         if (homeTeam) {
                             data.homeTeam.allocateBlockKill(playerNumber);
                         } else {
